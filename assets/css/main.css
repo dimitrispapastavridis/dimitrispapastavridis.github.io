@@ -4154,17 +4154,3 @@ input, select, textarea {
 		}
 
 	}
-
-/* Custom styles for banner */
-.banner-content {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Απόσταση μεταξύ ονόματος και εικόνας */
-}
-
-.profile-photo {
-    width: 80px; /* Πλάτος εικόνας */
-    height: 80px; /* Ύψος εικόνας */
-    border-radius: 70%; /* Στρογγυλή φωτογραφία */
-    object-fit: cover; /* Να προσαρμόζεται στο πλαίσιο */
-}
