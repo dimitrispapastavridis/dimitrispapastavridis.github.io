@@ -4162,11 +4162,9 @@ input, select, textarea {
 }
 
 .circular-image {
-    border-radius: 50%; /* Δημιουργεί κυκλικό σχήμα */
-    object-fit: cover; /* Καλύπτει πλήρως τον κύκλο χωρίς παραμόρφωση */
-    width: 150px; /* Ρυθμίστε το πλάτος */
-    height: 150px; /* Ρυθμίστε το ύψος */
-    border: 2px solid #ddd; /* Προαιρετικό πλαίσιο */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Σκιά */
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px; /* Ίδια τιμή */
+    height: 150px; /* Ίδια τιμή */
 }
 
