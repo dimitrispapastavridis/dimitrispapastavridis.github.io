@@ -4163,8 +4163,8 @@ input, select, textarea {
 }
 
 .profile-photo {
-    width: 20px; /* Πλάτος εικόνας */
-    height: 20px; /* Ύψος εικόνας */
+    width: 80px; /* Πλάτος εικόνας */
+    height: 80px; /* Ύψος εικόνας */
     border-radius: 70%; /* Στρογγυλή φωτογραφία */
     object-fit: cover; /* Να προσαρμόζεται στο πλαίσιο */
 }
