@@ -4167,3 +4167,20 @@ input, select, textarea {
     border-radius: 50%;
     object-fit: cover;
 }
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Τακτοποίηση κάθε στοιχείου κάθετα */
+    align-items: center; /* Κεντράρισμα οριζόντια */
+    gap: 20px; /* Απόσταση μεταξύ των στοιχείων */
+    margin-top: 20px; /* Περιθώριο πάνω για περισσότερο χώρο */
+}
+
+.contact-info span {
+    font-size: 1.2rem; /* Αύξηση του μεγέθους γραμματοσειράς αν χρειάζεται */
+}
+
+.contact-info a {
+    text-decoration: none; /* Αφαίρεση του υπογραμμισμένου από τα links */
+    color: inherit; /* Διατήρηση του χρώματος κειμένου */
+}
