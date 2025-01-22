@@ -4162,9 +4162,8 @@ input, select, textarea {
 }
 
 .circular-image {
-    display: block !important;
-    width: 150px !important;
-    height: 150px !important;
-    border-radius: 50% !important;
+    width: 200px !important; /* Ίδια διάσταση */
+    height: 200px !important; /* Ίδια διάσταση */
+    border-radius: 50%;
     object-fit: cover;
 }
