@@ -4162,10 +4162,9 @@ input, select, textarea {
 }
 
 .circular-image {
-    display: block;
-    width: 150px; /* Ίδια τιμή */
-    height: 150px; /* Ίδια τιμή */
-    border-radius: 50%;
+    display: block !important;
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
     object-fit: cover;
-    overflow: hidden;
 }
