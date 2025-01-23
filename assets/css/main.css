@@ -3073,19 +3073,17 @@ input, select, textarea {
 .portfolio-grid {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between; /* Χωρίζει τα items με ίσα διαστήματα */
+   justify-content: space-between;
    margin: 0;
-   padding: 0 1.25em;
-   width: 100%; /* Εκτείνεται σε όλο το πλάτος */
-   box-sizing: border-box; /* Διασφαλίζει ότι padding/borders δεν επηρεάζουν το width */
-}
-
-.portfolio-grid article {
-   flex: 0 0 calc(33.333% - 10px); /* Κάθε item καταλαμβάνει το 1/3 του πλάτους με κενό 10px */
-   margin: 5px; /* Ίσο περιθώριο γύρω από κάθε item */
+   padding: 0 3em;
+   width: 100%;
    box-sizing: border-box;
 }
-
+.portfolio-grid article {
+   flex: 0 0 calc(33.333% - 20px); /* 3 articles per row */
+   margin: 10px;
+   box-sizing: border-box;
+}
 .portfolio-grid article .image {
     border-radius: 5px 5px 0 0;
     display: block;
@@ -3093,29 +3091,26 @@ input, select, textarea {
     position: relative;
     width: 100%;
 }
-
 .portfolio-grid article .image img {
     border-radius: 5px 5px 0 0;
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
-
 /* Responsive Adjustments */
 @media screen and (max-width: 1280px) {
     .portfolio-grid article {
-        flex: 0 0 calc(50% - 10px); /* 2 items ανά σειρά */
+        flex: 0 0 calc(50% - 20px); /* 2 columns on smaller screens */
     }
 }
-
 @media screen and (max-width: 736px) {
     .portfolio-grid {
-        flex-direction: column; /* Στοιχεία σε κάθετη διάταξη */
+        flex-direction: column;
+        padding: 0 1.5em;
     }
-
     .portfolio-grid article {
-        flex: 0 0 100%; /* 1 item ανά σειρά */
-        margin: 0 0 20px; /* Προσθέτει κενό μεταξύ των άρθρων */
+        flex: 0 0 100%; /* 1 column on mobile */
+        margin: 0 0 20px;
     }
 }
 
