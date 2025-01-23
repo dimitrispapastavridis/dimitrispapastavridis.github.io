@@ -3085,8 +3085,8 @@ input, select, textarea {
         padding: 1.75em 1.75em 0.1em 1.75em;
         background-color: #353849;
         border-radius: 5px;
-        margin: 1.5em 6em 1.5em 0;
-        width: calc(33.333% - 6em);
+        margin: 1.5em 1.5em 1.5em 0;
+        width: calc(33.333% - 1.5em);
     }
     .portfolio-grid article:nth-child(3n) {
         margin-right: 0;
@@ -3107,13 +3107,9 @@ input, select, textarea {
         object-fit: cover;
     }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1280px) {
     .portfolio-grid article {
-	margin: 1em 2em 1em 0;
-        width: calc(50% - 2em);
-    }
-    .portfolio-grid article:nth-child(3n) {
-        margin-right: 2em;
+        width: calc(50% - 1.5em);
     }
     .portfolio-grid article:nth-child(2n) {
         margin-right: 0;
@@ -3123,14 +3119,11 @@ input, select, textarea {
 @media screen and (max-width: 736px) {
     .portfolio-grid article {
         padding: 1.5em 1.5em 0.1em 1.5em;
-        margin: 0.875em 1.75em 0.875em 0;
-        width: calc(50% - 1.75em);
+        margin: 0.875em 0.875em 0.875em 0;
+        width: calc(50% - 0.875em);
     }
     .portfolio-grid article:nth-child(2n) {
         margin-right: 0;
-    }
-    .portfolio-grid article:nth-child(3n) {
-        margin-right: 1.75em;
     }
     .portfolio-grid article .image {
         margin-bottom: 1.5em;
