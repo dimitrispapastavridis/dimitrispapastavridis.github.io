@@ -3072,13 +3072,14 @@ input, select, textarea {
 /* Portfolio Grid */
 .portfolio-grid {
    display: flex;
-   justify-content: space-between;
+   justify-content: flex-start; /* Align to far left */
+   flex-wrap: wrap; /* Allow wrapping if more than 3 items */
    margin: 0;
    padding: 0;
 }
 .portfolio-grid article {
-   width: calc(33.333% - 20px);
-   margin: 0 10px;
+   width: calc(33.333% - 20px); /* 3 items per row */
+   margin: 10px;
 }
 .portfolio-grid article:first-child {
    margin-left: 0;
@@ -3086,36 +3087,14 @@ input, select, textarea {
 .portfolio-grid article:last-child {
    margin-right: 0;
 }
-    .portfolio-grid article .image {
-        border-radius: 5px 5px 0 0;
-        display: block;
-        margin-bottom: 1.75em;
-        margin-left: -1.75em;
-        margin-top: -1.75em;
-        position: relative;
-        width: calc(100% + 3.5em);
-    }
-    .portfolio-grid article .image img {
-        border-radius: 5px 5px 0 0;
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
 @media screen and (max-width: 1280px) {
     .portfolio-grid article {
-        width: calc(50% - 1em);
+        width: calc(50% - 20px); /* 2 items per row on smaller screens */
     }
 }
 @media screen and (max-width: 736px) {
     .portfolio-grid article {
-        padding: 1.5em 1.5em 0.1em 1.5em;
-        width: 100%;
-    }
-    .portfolio-grid article .image {
-        margin-bottom: 1.5em;
-        margin-left: -1.5em;
-        margin-top: -1.5em;
-        width: calc(100% + 3em);
+        width: 100%; /* 1 item per row on mobile */
     }
 }
 
