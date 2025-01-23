@@ -4183,11 +4183,4 @@ input, select, textarea {
     text-decoration: none;
     color: inherit;
 
-.cv-title {
-    font-size: 2em; /* Μέγεθος γραμματοσειράς */
-    color: white; /* Λευκή γραμματοσειρά */
-    background-color: black; /* Μαύρο πλαίσιο */
-    padding: 10px; /* Εσωτερικό περιθώριο γύρω από το κείμενο */
-    display: inline-block; /* Για να εφαρμόζεται το φόντο μόνο στο κείμενο */
-    border: 2px solid black; /* Μαύρο περίγραμμα */
-}
+
