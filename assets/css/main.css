@@ -4182,42 +4182,4 @@ input, select, textarea {
 .contact-info a {
     text-decoration: none;
     color: inherit;
-	
-/* ===== Portfolio Grid Layout ===== */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Τρεις στήλες */
-    gap: 20px; /* Απόσταση μεταξύ των άρθρων */
-    margin-top: 20px;
-}
 
-.portfolio-grid article {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-grid .image img {
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-grid .image img:hover {
-    transform: scale(1.05); /* Zoom effect */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* Δύο στήλες σε tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Μία στήλη σε κινητά */
-    }
-}
