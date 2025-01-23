@@ -3075,7 +3075,7 @@ input, select, textarea {
    flex-wrap: wrap;
    justify-content: space-between; /* Χωρίζει τα items με ίσα διαστήματα */
    margin: 0;
-   padding: 50;
+   padding: 0 1.25em;
    width: 100%; /* Εκτείνεται σε όλο το πλάτος */
    box-sizing: border-box; /* Διασφαλίζει ότι padding/borders δεν επηρεάζουν το width */
 }
