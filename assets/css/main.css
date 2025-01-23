@@ -3080,14 +3080,18 @@ input, select, textarea {
    box-sizing: border-box;
 }
 .portfolio-grid article {
-   flex: 0 0 calc(33.333% - 20px); /* 3 articles per row */
+   flex: 0 0 calc(33.333% - 20px);
    margin: 10px;
    box-sizing: border-box;
+   background-color: #353849; /* Dark background for articles */
+   border-radius: 5px;
+   padding: 0; /* Reset padding */
+   overflow: hidden; /* Ensures content stays within rounded corners */
 }
 .portfolio-grid article .image {
     border-radius: 5px 5px 0 0;
     display: block;
-    margin-bottom: 1.75em;
+    margin-bottom: 0; /* Remove margin */
     position: relative;
     width: 100%;
 }
@@ -3097,10 +3101,13 @@ input, select, textarea {
     height: 300px;
     object-fit: cover;
 }
+.portfolio-grid article .content {
+    padding: 1.5em; /* Added content padding */
+}
 /* Responsive Adjustments */
 @media screen and (max-width: 1280px) {
     .portfolio-grid article {
-        flex: 0 0 calc(50% - 20px); /* 2 columns on smaller screens */
+        flex: 0 0 calc(50% - 20px);
     }
 }
 @media screen and (max-width: 736px) {
@@ -3109,7 +3116,7 @@ input, select, textarea {
         padding: 0 1.5em;
     }
     .portfolio-grid article {
-        flex: 0 0 100%; /* 1 column on mobile */
+        flex: 0 0 100%;
         margin: 0 0 20px;
     }
 }
