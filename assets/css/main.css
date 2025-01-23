@@ -4182,5 +4182,29 @@ input, select, textarea {
 .contact-info a {
     text-decoration: none;
     color: inherit;
+	
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Απόσταση μεταξύ των στοιχείων */
+}
+
+.grid-layout article {
+    text-align: center; /* Κεντράρισμα περιεχομένου */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-layout .image img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid-layout .image img:hover {
+    transform: scale(1.05); /* Zoom effect όταν περνάει ο δείκτης */
+}
 
 
