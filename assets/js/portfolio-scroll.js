@@ -2,24 +2,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const portfolioGrid = document.querySelector('.portfolio-grid');
     const scrollLeftBtn = document.querySelector('.scroll-left');
     const scrollRightBtn = document.querySelector('.scroll-right');
-    const articleWidth = document.querySelector('.portfolio-grid article').offsetWidth;
-    let currentScroll = 0;
-    const maxScroll = portfolioGrid.scrollWidth - portfolioGrid.clientWidth;
+    const articles = document.querySelectorAll('.portfolio-grid article');
+    
+    let currentIndex = 0;
 
     scrollRightBtn.addEventListener('click', () => {
-        currentScroll += articleWidth;
-        if (currentScroll > maxScroll) {
-            currentScroll = 0; // Reset to start when reaching the end
-        }
-        portfolioGrid.style.transform = `translateX(-${currentScroll}px)`;
+        // Hide first article
+        articles[currentIndex].classList.add('hidden');
+        
+        // Move to next index
+        currentIndex = (currentIndex + 1) % articles.length;
+        
+        // Show new article
+        articles[currentIndex].classList.remove('hidden');
     });
 
     scrollLeftBtn.addEventListener('click', () => {
-        currentScroll -= articleWidth;
-        if (currentScroll < 0) {
-            // Find the last visible position when at the start
-            currentScroll = portfolioGrid.scrollWidth - portfolioGrid.clientWidth;
-        }
-        portfolioGrid.style.transform = `translateX(-${currentScroll}px)`;
+        // Hide first article
+        articles[currentIndex].classList.add('hidden');
+        
+        // Move to previous index
+        currentIndex = (currentIndex - 1 + articles.length) % articles.length;
+        
+        // Show new article
+        articles[currentIndex].classList.remove('hidden');
     });
 });
