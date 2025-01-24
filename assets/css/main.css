@@ -3141,6 +3141,10 @@ input, select, textarea {
     object-fit: cover;
 }
 
+.portfolio-grid article.hidden {
+    display: none;
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 1280px) {
     .portfolio-grid article {
