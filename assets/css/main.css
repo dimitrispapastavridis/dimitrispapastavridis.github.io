@@ -3069,55 +3069,102 @@ input, select, textarea {
 
 		}
 
+
+/* Portfolio Scroll Container */
+.portfolio-scroll-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll-btn {
+    background-color: rgba(53, 56, 73, 0.7);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(53, 56, 73, 0.9);
+}
+
+.scroll-left {
+    left: 0;
+}
+
+.scroll-right {
+    right: 0;
+}
+
 /* Portfolio Grid */
 .portfolio-grid {
    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   margin: 0;
-   padding: 0 3em;
+   transition: transform 0.5s ease;
    width: 100%;
-   box-sizing: border-box;
 }
+
 .portfolio-grid article {
    flex: 0 0 calc(33.333% - 20px);
    margin: 10px;
    box-sizing: border-box;
-   background-color: #353849; /* Dark background for articles */
+   background-color: #353849;
    border-radius: 5px;
-   padding: 0; /* Reset padding */
-   overflow: hidden; /* Ensures content stays within rounded corners */
+   padding: 0;
+   overflow: hidden;
 }
+
 .portfolio-grid article .image {
     border-radius: 5px 5px 0 0;
     display: block;
-    margin-bottom: 0; /* Remove margin */
+    margin-bottom: 0;
     position: relative;
     width: 100%;
 }
+
 .portfolio-grid article .image img {
     border-radius: 5px 5px 0 0;
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
-.portfolio-grid article .content {
-    padding: 1.5em; /* Added content padding */
-}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 1280px) {
     .portfolio-grid article {
         flex: 0 0 calc(50% - 20px);
     }
 }
+
 @media screen and (max-width: 736px) {
+    .portfolio-scroll-container {
+        flex-direction: column;
+    }
+    
     .portfolio-grid {
         flex-direction: column;
         padding: 0 1.5em;
     }
+    
     .portfolio-grid article {
         flex: 0 0 100%;
         margin: 0 0 20px;
+    }
+    
+    .scroll-btn {
+        display: none; /* Hide scroll buttons on mobile */
     }
 }
 
