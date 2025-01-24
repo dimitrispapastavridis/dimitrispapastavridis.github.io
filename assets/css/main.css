@@ -4235,3 +4235,43 @@ input, select, textarea {
     text-decoration: none;
     color: inherit;
 
+
+<style>
+.portfolio-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.portfolio-slider input {
+    display: none;
+}
+
+.portfolio-slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-slides article {
+    flex: 0 0 33.333%;
+    width: 33.333%;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#slide-control-1:checked ~ .portfolio-slides {
+    transform: translateX(-33.333%);
+}
+
+#slide-control-2:checked ~ .portfolio-slides {
+    transform: translateX(-66.666%);
+}
+</style>
