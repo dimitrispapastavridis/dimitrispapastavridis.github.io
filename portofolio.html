@@ -40,53 +40,121 @@
 
 				<!-- Wrapper -->
 					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Portofolio</h2>
-							</div>
-						</header>
-
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
-								<h2 class="major">Dashboards</h2>
-									<section class="portfolio-grid">
-
-									    <article>
-									        <a class="image"><img src="images/AdventureWorksBikeShop.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
-									        <h3 class="major">Bike Shop Performance Dashboard</h3>
-									        <p>Interactive dashboard analyzing sales, inventory, and customer data to track the performance of the Bike Shop.</p>
-									        <a href="https://github.com/dimitrispapastavridis/AdventureWorksBikeShop" class="special">Learn more</a>
-									    </article>
-									    <article>
-									        <a class="image"><img src="images/LEGO_logo.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
-									        <h3 class="major">Lego Set Explorer</h3>
-									        <p>A dynamic Power BI dashboard designed to help users discover and choose their next Lego set based on preferences and insights.</p>
-									        <a href="https://github.com/dimitrispapastavridis/LegoSetExplorer" class="special">Learn more</a>
-									    </article>
-									    <article>
-									        <a class="image"><img src="images/AirlineDelays.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
-									        <h3 class="major">Flight Status Dashboard</h3>
-									        <p>Comprehensive airline flight data dashboard with key metrics on total, delayed, and canceled flights.</p>
-									        <a href="https://github.com/dimitrispapastavridis/FlightStatusDashboard" class="special">Learn more</a>
-									    </article>
-									</section>
-								</div>
-							</div>
-							<div class="wrapper">
-								<div class="inner">
-								<h2 class="major">Data Science</h2>
-									<section class="portfolio-grid">
-									    <article>
-									        <a class="image"><img src="images/ppc.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
-									        <h3 class="major">Energy Price Forecast</h3>
-									        <p>Comperative Analysis of RNN and Seq2Seq Models for day-ahead wholesale electricity price prediction.</p>
-									        <a href="https://github.com/dimitrispapastavridis/ppc-seq2seq" class="special">Learn more</a>
-									    </article>
-									</section>
-								</div>
-							</div>
+					    <header>
+					        <div class="inner">
+					            <h2>Portfolio</h2>
+					        </div>
+					    </header>
+					
+					    <!-- Dashboards Section -->
+					    <div class="wrapper">
+					        <div class="inner">
+					            <h2 class="major">Dashboards</h2>
+					            <div class="portfolio-container">
+					                <button class="arrow left-arrow" style="display: none;">&#9664;</button>
+					                <section class="portfolio-grid">
+					                    <article>
+					                        <a class="image"><img src="images/AdventureWorksBikeShop.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+					                        <h3 class="major">Bike Shop Performance Dashboard</h3>
+					                        <p>Interactive dashboard analyzing sales, inventory, and customer data to track the performance of the Bike Shop.</p>
+					                        <a href="https://github.com/dimitrispapastavridis/AdventureWorksBikeShop" class="special">Learn more</a>
+					                    </article>
+					                    <article>
+					                        <a class="image"><img src="images/LEGO_logo.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+					                        <h3 class="major">Lego Set Explorer</h3>
+					                        <p>A dynamic Power BI dashboard designed to help users discover and choose their next Lego set based on preferences and insights.</p>
+					                        <a href="https://github.com/dimitrispapastavridis/LegoSetExplorer" class="special">Learn more</a>
+					                    </article>
+					                    <article>
+					                        <a class="image"><img src="images/AirlineDelays.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+					                        <h3 class="major">Flight Status Dashboard</h3>
+					                        <p>Comprehensive airline flight data dashboard with key metrics on total, delayed, and canceled flights.</p>
+					                        <a href="https://github.com/dimitrispapastavridis/FlightStatusDashboard" class="special">Learn more</a>
+					                    </article>
+					                </section>
+					                <button class="arrow right-arrow">&#9654;</button>
+					            </div>
+					        </div>
+					    </div>
 					</section>
+
+<style>
+    .portfolio-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .portfolio-grid {
+        display: flex;
+        overflow: hidden;
+        width: 80%;
+        scroll-behavior: smooth;
+    }
+
+    .portfolio-grid article {
+        min-width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .arrow {
+        background-color: #213052;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .arrow:hover {
+        background-color: #7D1C30;
+    }
+
+    .left-arrow {
+        position: absolute;
+        left: 0;
+    }
+
+    .right-arrow {
+        position: absolute;
+        right: 0;
+    }
+</style>
+
+<script>
+    const portfolioGrid = document.querySelector(".portfolio-grid");
+    const articles = document.querySelectorAll(".portfolio-grid article");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    let currentIndex = 0;
+
+    function updateArrows() {
+        leftArrow.style.display = currentIndex === 0 ? "none" : "block";
+        rightArrow.style.display = currentIndex === articles.length - 1 ? "none" : "block";
+    }
+
+    function moveToIndex(index) {
+        const articleWidth = articles[0].clientWidth;
+        portfolioGrid.style.transform = `translateX(-${index * articleWidth}px)`;
+        currentIndex = index;
+        updateArrows();
+    }
+
+    leftArrow.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            moveToIndex(currentIndex - 1);
+        }
+    });
+
+    rightArrow.addEventListener("click", () => {
+        if (currentIndex < articles.length - 1) {
+            moveToIndex(currentIndex + 1);
+        }
+    });
+
+    updateArrows(); // Initialize arrows on page load
+</script>
 
 				<!-- Footer -->
 					<section id="footer">
