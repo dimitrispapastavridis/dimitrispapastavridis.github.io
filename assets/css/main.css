@@ -4236,48 +4236,4 @@ input, select, textarea {
     color: inherit;
 
 
-.project-slider {
-  margin: 50px 0;
-}
-
-.slider-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.slider-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding: 10px;
-}
-
-.project-card {
-  flex: 0 0 300px;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.slider-btn {
-  background: #333;
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
-}
 
