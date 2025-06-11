@@ -49,26 +49,55 @@
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
-									<section class="project-slider">
-										<h2 class="major">Machine Learning Projects</h2>
-										<div class="slider-wrapper">
-											<button class="slider-btn left">&#10094;</button>
-									    		<div class="slider-container">
-									      			<div class="project-card">
-												        <img src="images/ppc.jpg" alt="Energy Price Forecast">
-									        			<h3>Energy Price Forecast</h3>
-									        			<p>Comperative Analysis of RNN and Seq2Seq Models for electricity price prediction.</p>
-									        			<a href="https://github.com/dimitrispapastavridis/ppc-seq2seq" class="special">Learn more</a>
-									      			</div>
-									      			<div class="project-card">
-									        			<img src="images/AirlineDelays_2.jpg" alt="Flight Status Dashboard">
-												        <h3>Flight Status Dashboard</h3>
-												        <p>Airline data dashboard with key metrics for total, delayed, and canceled flights.</p>
-												        <a href="https://github.com/dimitrispapastavridis/FlightStatusDashboard" class="special">Learn more</a>
-									      			</div>
-											</div>
-									    		<button class="slider-btn right">&#10095;</button>
-									  	</div>
+									<section class="portfolio-grid">
+									    <article>
+									        <a class="image"><img src="images/ppc.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Energy Price Forecast</h3>
+									        <p>Comperative Analysis of RNN and Seq2Seq Models for day-ahead wholesale electricity price prediction.</p>
+									        <a href="https://github.com/dimitrispapastavridis/ppc-seq2seq" class="special">Learn more</a>
+									    </article>
+									    <article>
+									        <a class="image"><img src="images/AdventureWorksBikeShop_portfolio.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Bike Shop Performance Dashboard</h3>
+									        <p>Interactive dashboard analyzing sales, inventory, and customer data to track the performance of the Bike Shop.</p>
+									        <a href="https://github.com/dimitrispapastavridis/AdventureWorksBikeShop" class="special">Learn more</a>
+									    </article>
+									    <article>
+									        <a class="image"><img src="images/LEGO_logo.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Lego Set Explorer</h3>
+									        <p>A dynamic Power BI dashboard designed to help users discover and choose their next Lego set based on preferences and insights.</p>
+									        <a href="https://github.com/dimitrispapastavridis/LegoSetExplorer" class="special">Learn more</a>
+									    </article>
+									    <article>
+									        <a class="image"><img src="images/AirlineDelays_2.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Flight Status Dashboard</h3>
+									        <p>Comprehensive airline flight data dashboard with key metrics on total, delayed, and canceled flights.</p>
+									        <a href="https://github.com/dimitrispapastavridis/FlightStatusDashboard" class="special">Learn more</a>
+									    </article>
+									    <article>
+									        <a class="image"><img src="images/spotifylogo.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Spotify Streaming Analytics Dashboard</h3>
+									        <p>A Power BI dashboard analyzing Spotify streaming trends with interactive insights on tracks, albums, and artists.</p>
+									        <a href="https://github.com/dimitrispapastavridis/MavenMusicChallenge" class="special">Learn more</a>
+									    </article>	
+									    <article>
+									        <a class="image"><img src="images/pizza.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Pizza Sales Analytics Dashboard</h3>
+									        <p>The Pizza Sales Dashboard provides an interactive analysis of pizza sales, highlighting revenue trends, top-selling pizzas, and customer preferences.</p>
+									        <a href="https://github.com/dimitrispapastavridis/MavenPizzaChallenge" class="special">Learn more</a>
+									    </article>	
+									    <article>
+									        <a class="image"><img src="images/Maven_Market.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Maven Market Dashboard</h3>
+									        <p>This dashboard provides key metrics on the Mayen Market's monthly transactions, profit, and returns across its product brands.</p>
+									        <a href="https://github.com/dimitrispapastavridis/Maven-Market" class="special">Learn more</a>
+									    </article>		
+									    <article>
+									        <a class="image"><img src="images/DataScienceSalary.jpg" alt="" style="width: 100%; height: 300px; object-fit: cover;" /></a>
+									        <h3 class="major">Data Science Salary Dashboard</h3>
+									        <p>This project provides an interactive Excel dashboard that analyzes and visualizes salary trends across various Data Science roles.</p>
+									        <a href="https://github.com/dimitrispapastavridis/Data-Science-Salary-Dashboard" class="special">Learn more</a>
+									    </article>				
 									</section>
 								</div>
 							</div>
@@ -92,21 +121,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-  				document.querySelectorAll('.project-slider').forEach(section => {
-					const container = section.querySelector('.slider-container');
-					const leftBtn = section.querySelector('.slider-btn.left');
-					const rightBtn = section.querySelector('.slider-btn.right');
-			
-			    		leftBtn.addEventListener('click', () => {
-			      			container.scrollBy({ left: -320, behavior: 'smooth' });
-			    		});
-			
-			    		rightBtn.addEventListener('click', () => {
-			      			container.scrollBy({ left: 320, behavior: 'smooth' });
-			    		});
-			  	});
-			</script>
 
 	</body>
 </html>
